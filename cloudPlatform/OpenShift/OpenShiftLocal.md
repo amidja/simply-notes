@@ -21,7 +21,6 @@ Log in as administrator:
   Username: kubeadmin
   Password: CeKp9-eGJSU-Vbypu-4o3TB
 
-
 Log in as user:
   Username: developer
   Password: developer
