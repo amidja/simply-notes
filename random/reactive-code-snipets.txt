@@ -1,0 +1,11 @@
+// How to make legacy coder reactive
+
+class MyService {
+  private Scheduler scheduler = Schedulers.newElastic("myThreads");
+  
+  public String blockingMethod() {
+    ...
+    return Mono.fromSupplier(() -> this.blockingWebService())
+               .subscribeOn(this.scheduler);
+  }
+}

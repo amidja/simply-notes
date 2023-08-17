@@ -1,0 +1,12 @@
+# Download NPCAP - https://nmap.org/npcap/
+
+# Download Packetbeat - https://www.elastic.co/downloads/beats/packetbeat
+
+# Enable Packetbeat as a service 
+$ powershell.exe -File .\install-packetbeat-service.ps1
+
+# Setup dashboards/templates
+$ .\packetbeat setup -e
+
+# Start Packetbeat 
+$ powershell.exe Start-Service packetbeat

@@ -1,7 +1,8 @@
  ## Install OpenShift Local 
  
  https://github.com/crc-org
- 
+ https://console.redhat.com/openshift/create/local
+ https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.20
 
  crc config set consent-telemetry no
  crc config set memory 16384

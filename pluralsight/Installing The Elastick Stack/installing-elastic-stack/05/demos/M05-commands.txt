@@ -1,0 +1,29 @@
+# Winlogbeat download page
+https://www.elastic.co/downloads/beats/winlogbeat
+
+# download winlogbeat
+curl https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-7.13.4-windows-x86_64.zip
+
+# Admin powershell prompt - setup logstash as a service
+$ PowerShell.exe -ExecutionPolicy UnRestricted -File .\install-service-winlogbeat.ps1 -ExecutionPolicy UnRestricted -File .\install-service-winlogbeat.ps1
+
+# Get a list of event logs
+$ Get-EventLog *
+
+# Force Winlogbeat to manually load the template - from Powershell
+$ .\winlogbeat.exe setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["localhost:9200"]'
+
+# Load the default Kibana dashboards 
+$ .\winlogbeat.exe setup -e -E output.logstash.enabled=false -E output.elasticsearch.hosts=['192.168.127.200:9200'] -E setup.kibana.host=192.168.127.215:5601
+
+# Install metricbeat service 
+$ PowerShell.exe -ExecutionPolicy UnRestricted -File .\install-service-metricbeat.ps1
+
+# Manually install metricbeat elasticsearch templates
+$ .\metricbeat.exe setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["192.168.127.200:9200"]'
+
+# Start metricbeat service
+$ Start-Service metricbeat
+
+# Install  metricbeat Kibana dashboards
+$ .\metricbeat.exe setup -e -E output.logstash.enabled=false -E output.elasticsearch.hosts=['192.168.127.200:9200'] -E setup.kibana.host=192.168.127.215:5601

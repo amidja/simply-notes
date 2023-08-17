@@ -1,0 +1,15 @@
+# Elastic public signing key
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+# Ensure apt-transport-https is installed 
+sudo apt-get install apt-transport-https
+
+# Add the repository definition
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+
+# Install Kibana
+sudo apt-get update && sudo apt-get install kibana
+
+# Modify Kibana configuration file
+$ sudo vim /etc/kibana/kibana.yml
+

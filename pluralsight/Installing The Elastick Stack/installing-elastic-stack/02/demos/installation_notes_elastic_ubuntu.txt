@@ -1,0 +1,63 @@
+# Set a static IP address - for this course it will be 192.168.127.200
+network:
+  version: 2
+  ethernets:
+    ens33:
+      dhcp4: no
+      addresses: [192.168.127.200/24]
+      gateway4: 192.168.127.1
+      nameservers:
+        addresses: [9.9.9.9]
+
+# First, install Java OpenJDK
+sudo apt install openjdk-14-jre-headless
+
+# Check Java version
+java --version
+
+#Official Elastic documentation: https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
+
+# Install the public signing key
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+
+# Install apt-transport-https on Ubuntu
+sudo apt-get install apt-transport-https
+
+# Save the repository definition to /etc/apt/sources.list.d/elastic-7.x.list
+echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+
+
+# Install the Debian packages
+sudo apt-get update && sudo apt-get install elasticsearch
+
+# using systemctl, configure Elastic to start when the system boots
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable elasticsearch.service
+
+# Elastic can now be started/stopped with the following systemctl commands
+sudo systemctl start elasticsearch.service
+sudo systemctl status elasticsearch.service
+sudo systemctl stop elasticsearch.service
+
+# Test to see if Elastic is running on port 9200 over http
+curl localhost:9200
+curl --cacert /etc/elasticsearch/certs/http_ca.crt -u elastic https://localhost:9200
+
+# Edit the elasticsearch configuration file
+sudo nano /etc/elasticsearch/elasticsearch.yml
+
+# Modify cluster name
+cluster.name: globo-monitoring
+
+# Modify node name
+node.name: globo-linux-es1
+
+# Modify the master cluster node 
+cluster.initial_master_nodes: ["globo-linux-es1"]
+
+# modify IP
+network.host: 192.168.127.200
+
+# increase the mmap counts
+sysctl -w vm.max_map_count=262144
+

@@ -1,0 +1,32 @@
+# Install Filebeat with apt
+$ sudo apt install filebeat
+
+# Enable filebeat as a service 
+$ sudo systemctl enable filebeat.service 
+
+# List filebeat modules
+$ sudo filebeat modules list
+
+# Enable filebeat modules 
+$ sudo filebeat modules enable system apache
+
+# Setup dashboards/templates
+$ sudo filebeat setup -e
+
+# Start file beat 
+$ sudo systemctl start filebeat.service
+
+# Install Metricbeat 
+$ sudo apt install metricbeat
+
+# Enable metricbeat as a service 
+$ sudo systemctl enable metricbeat.service 
+
+# List metricbeat modules
+$ sudo metricbeat modules list
+
+# Setup dashboards/templates
+$ sudo filebeat setup -e
+
+# Start file beat 
+$ sudo systemctl start metricbeat.service
