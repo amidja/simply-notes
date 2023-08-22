@@ -1,7 +1,6 @@
 
 # Elastic 
 
-
 ##  References 
 [Home](https://www.elastic.co/)
 [Cloud Elastic](https://cloud.elastic.co/deployments)
