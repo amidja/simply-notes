@@ -9,10 +9,9 @@ Helm is a tool that automates the creation, packaging, configuration, and deploy
 [Helm Install ] (https://helm.sh/docs/intro/install/)
 [Helm on GitHub](https://github.com/helm/helm)
 
-
 #### Initialize a Helm Chart Repository
 
-```
+```text
  helm repo add bitnami https://charts.bitnami.com/bitnami
  helm search repo bitnami
 ```
@@ -27,6 +26,7 @@ Helm charts allow you to manage Kubernetes manifests without using the Kubernete
 [Bitnami Charts](https://github.com/bitnami/charts/tree/main/bitnami)
 
 #### Scaffolding a Helm chart
+
 To scaffold a sample Helm chart that can customized to a specific needs. All what we need to do is run:
 
 ```text
