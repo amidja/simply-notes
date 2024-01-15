@@ -1,0 +1,16 @@
+List switches enabled:  Get-VMSwitch
+
+Configuration:
+  > minishift config set hyperv-virtual-switch "External VM Switch"
+
+  > minishift config set vm-driver virtualbox
+      or minishift start --vm-driver virtualbox
+
+  > minishift config unset vm-driver
+  > minishift config set vm-driver hyperv
+
+
+minishift start --show-libmachine-logs -v 5
+
+https://192.168.0.75:8443
+https://192.168.0.75:8443/console/
