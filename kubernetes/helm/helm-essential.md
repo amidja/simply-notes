@@ -33,7 +33,7 @@ To scaffold a sample Helm chart that can customized to a specific needs. All wha
 helm create mychart
 ```
 
-This will create a directory called 'mychart' that contains the necessary files to deploy a fully functional Helm chart. 
+This will create a directory called 'mychart' that contains the necessary files to deploy a fully functional Helm chart.
 
 #### Working with a Helm chart
 

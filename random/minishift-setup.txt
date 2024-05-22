@@ -1,4 +1,4 @@
-List switches enabled:  Get-VMSwitch
+External Virtual SwitchList switches enabled:  Get-VMSwitch
 
 Configuration:
   > minishift config set hyperv-virtual-switch "External VM Switch"
@@ -14,3 +14,14 @@ minishift start --show-libmachine-logs -v 5
 
 https://192.168.0.75:8443
 https://192.168.0.75:8443/console/
+
+
+When Getting
+	'W0116 14:33:07.091495   22864 main.go:291] Unable to resolve the current Docker CLI context "default": context "default": context not found: open C:\Users\Nightwing\.docker\contexts\meta	\37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f\meta.json: The system cannot find the path specified.'
+Do 
+	docker context use default 
+
+
+Running minikube with hyperv driver:
+
+minikube start — vm-driver=hyperv — hyperv-virtual-switch='External Virtual Switch'
