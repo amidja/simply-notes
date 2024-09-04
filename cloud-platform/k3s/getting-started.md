@@ -61,8 +61,8 @@ https://github.com/kubernetes/dashboard
 ```bash
 
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
-
-helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
+helm create namespace kubernetes-dashboard
+helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --namespace kubernetes-dashboard
 
 ```
 
@@ -83,7 +83,8 @@ Dashboard will be available at:
 
 ### Accessing Dashboard 
 
-https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+[Web UI Dashboard][https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/]
+https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
 
 ```bash
 
