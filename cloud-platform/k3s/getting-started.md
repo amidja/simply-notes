@@ -92,6 +92,10 @@ kubectl -n kubernetes-dashboard create token admin-user
 
 #or
 
-kubectl get secret admin-user -n kubernetes-dashboard -o jsonpath={".data.token"} | base64 -d
+kubectl get secret admin-user -n kubernetes-dashboard -o jsonpath={".data.token"} | base64 -d 
 
 ```
+
+If you want to expose a service outside your cluster, assign a either a service of type nodeport or loadbalancer. 
+
+Or you can deploy an ingress and do the config there. 
