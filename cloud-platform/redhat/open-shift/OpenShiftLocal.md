@@ -1,4 +1,4 @@
- ## Install OpenShift Local 
+ # Install OpenShift Localy 
  
  https://github.com/crc-org
  https://github.com/crc-org/crc/releases
@@ -13,8 +13,7 @@
  crc start 
  crc console 
 
-
-## Started the OpenShift cluster.
+## Starting the Cluster
 
 The server is accessible via web console at:
   https://console-openshift-console.apps-crc.testing
@@ -40,7 +39,6 @@ oc get nodes
 oc debug nodes/<node_name>
 oc login -u kubeadmin -p CeKp9-eGJSU-Vbypu-4o3TB https://api.crc.testing:6443:6443
 podman login -u kubeadmin -p $(oc whoami -t) image-registry.openshift-image-registry.svc:5000
-
 
 
 ## Agnohost 

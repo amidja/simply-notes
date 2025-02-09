@@ -1,5 +1,5 @@
 # simply-notes
 
-## Cloud Technologies 
+## Cloud Technologies
 
 [Knative](https://knative.dev/docs/)

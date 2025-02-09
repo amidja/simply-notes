@@ -1,0 +1,1 @@
+[Istio Ambient](https://itnext.io/kubernetes-networking-with-ambient-istios-sidecarless-innovation-0ef5fcc267f8)
