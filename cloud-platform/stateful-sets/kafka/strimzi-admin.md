@@ -1,6 +1,7 @@
 # Administartive Notes
 
 How to restarta kafka strimzipodset:
+
 ```bash
 
 oc get strimzipodset
@@ -13,3 +14,5 @@ oc annotate strimzipodset kafka-kafka strimzi.io/manual-rolling-update="true"
 ```
 
 ## Upgrading Strimzi
+
+[Cluster Upgrade Docs](https://strimzi.io/docs/operators/latest/deploying#con-upgrade-cluster-str)
