@@ -1,6 +1,6 @@
-# Administartive Notes
+## Administrative Notes
 
-How to restarta kafka strimzipodset:
+How to restart Kafka strimzipodset:
 
 ```bash
 

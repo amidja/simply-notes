@@ -1,0 +1,16 @@
+# As StorageClasses (sc) class is not specifed the default one will be used.
+# To see all, including default StorageClasses on a cluster:
+#       kubectl get sc
+#
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: emergency-cases
+  namespace: emergencies-portal
+spec:
+  #storageClassName: use the default 
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi

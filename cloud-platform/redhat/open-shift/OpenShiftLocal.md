@@ -1,4 +1,4 @@
- # Install OpenShift Localy 
+ # Install OpenShift Locally 
  
  https://github.com/crc-org
  https://github.com/crc-org/crc/releases
@@ -15,8 +15,8 @@
 
 ## Starting the Cluster
 
-The server is accessible via web console at:
-  https://console-openshift-console.apps-crc.testing
+The server is accessible via web console at: 
+https://console-openshift-console.apps-crc.testing
 
 Log in as administrator:
   Username: kubeadmin
