@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cloud-platform/redhat/open-shift/OpenShiftLocal.md",
+                "file": "cloud-platform/stateful-sets/postgresql/pgbouncer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OpenShiftLocal"
+              "title": "pgbouncer"
             }
           }
         ]
@@ -160,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -170,6 +171,9 @@
   },
   "active": "4f3fe6fdacab366f",
   "lastOpenFiles": [
+    "cloud-platform/stateful-sets/postgresql/percona-operator.md",
+    "cloud-platform/stateful-sets/mongodb/README.md",
+    "cloud-platform/redhat/open-shift/OpenShiftLocal.md",
     "cloud-platform/redhat/open-shift/OpenShiftBuildingApplications.md",
     "cloud-platform/stateful-sets/kafka/strimizi-to-orgnize.md",
     "cloud-platform/stateful-sets/kafka/Strimizi_Admin_Notes.md",
@@ -179,7 +183,6 @@
     "cloud-platform/stateful-sets/kafka/Kafka Design Patterns.md",
     "cloud-platform/redhat/redhat-training/do188/ch2-notes.md",
     "cloud-platform/redhat/open-shift/RedHat-Ubi-BaseImage.md",
-    "cloud-platform/redhat/open-shift/OpenShiftLocal.md",
     "cloud-platform/k3s/getting-started.md",
     "README.md",
     "random/installing-windows-11.md",
