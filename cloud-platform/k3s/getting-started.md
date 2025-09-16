@@ -47,9 +47,12 @@ helm --kubeconfig /etc/rancher/k3s/k3s.yaml ls --all-namespaces
 ```bash
 
 export KUBECONFIG=~/.kube/config
-mkdir ~/.kube 2> /dev/null
+mkdir -p ~/.kube 2> /dev/null
 sudo k3s kubectl config view --raw > "$KUBECONFIG"
 chmod 600 "$KUBECONFIG"
+whoami
+sudo chown ssm-user:ssm-user ~/.kube/config  
+kubectl get no
 
 ```
 
