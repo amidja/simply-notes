@@ -30,7 +30,7 @@ kubectl logs $OP_POD --namespace=psmb-op
 
 
 helm install my-mongo-db percona/psmdb-db --namespace=psmb
-helm install my-mongo-db ./ --namespace=psmb
+helm install my-mongo-db ./ --namespace=my-psmb
 helm uninstall my-mongo-db --namespace=psmb
 
 #Percona Server for MongoDB cluster is deployed now. Get the username and password:
