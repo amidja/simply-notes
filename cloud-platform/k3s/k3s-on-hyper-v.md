@@ -57,6 +57,7 @@ whoami
 sudo chown amidja:amidja ~/.kube/config  
 kubectl get no
 ```
+
 [K3S Server Config](https://docs.k3s.io/cli/server)
  
 kubectl get secret  bootstrap-secret -oyaml -n  cattle-system  

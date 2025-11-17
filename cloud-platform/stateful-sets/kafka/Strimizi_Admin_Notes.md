@@ -9,10 +9,18 @@ oc get strimzipodset
 #kafka-kafka                                 3      3            3              77d
 #kafka-zookeeper                             3      3            3              77d
 
-oc annotate strimzipodset kafka-kafka strimzi.io/manual-rolling-update="true" 
 # This will  restart kafka broker pods 
+oc annotate strimzipodset kafka-kafka strimzi.io/manual-rolling-update="true" 
+
+# This will  restart kafka zookeeper pods 
+oc annotate statefulset kafka-zookeeper strimzi.io/manual-rolling-update=true
+
+# Check the status of the cluster
+oc rollout status sts/kafka-kafka
+oc wait kafka/kafka-cluster --for=condition=Ready --timeout=1h
+
 ```
 
-## Upgrading Strimzi
+## Upgrading Strimzi Operator
 
 [Cluster Upgrade Docs](https://strimzi.io/docs/operators/latest/deploying#con-upgrade-cluster-str)

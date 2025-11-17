@@ -1,4 +1,18 @@
-# RH UBI Base Image
+
+## RedHat Registry 
+
+
+[Registry Authentication](https://access.redhat.com/articles/RegistryAuthentication)
+qja266/Yttrium@1972
+
+## RH UBI Base Image
+
+[Introduction](https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image)
+[Universal Base Images (UBI): Images, repositories, and packages](https://access.redhat.com/articles/4238681)
+[All You Need to Know About Red Hat Universal Base Image](http://crunchtools.com/all-you-need-to-know-about-red-hat-universal-base-image/)
+[FAQ - Universal Base Images](https://developers.redhat.com/articles/ubi-faq)
+
+
 
 The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities.
 
