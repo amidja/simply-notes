@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cloud-platform/stateful-sets/kafka/strimizi_admin_notes.md",
+                "file": "cloud-platform/stateful-sets/kafka/strimizi-high-availability.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "strimizi_admin_notes"
+              "title": "strimizi-high-availability"
             }
           }
         ]
@@ -171,10 +171,21 @@
   },
   "active": "7b6500b6f7bcb603",
   "lastOpenFiles": [
-    "cloud-platform/stateful-sets/kafka/strimizi-high-availability.md",
     "cloud-platform/stateful-sets/kafka/strimizi_admin_notes.md",
-    "cloud-platform/stateful-sets/kafka/kafka-connector.md",
     "cloud-platform/stateful-sets/kafka/kafka-design-patterns.md",
+    "cloud-platform/stateful-sets/kafka/kafka-connector.md",
+    "cloud-platform/stateful-sets/kafka/strimizi-high-availability.md",
+    "k8s-refs/networking/istio.md",
+    "k8s-refs/client-tools/kubectl-context-managment.md",
+    "k8s-refs/storage/k8-storage-intro.md",
+    "linux/admin/troubleshooting-network.md",
+    "linux/admin/troubleshooting-usb.md",
+    "linux/linux-on-hyperV.md",
+    "random/windows-linux-wls.md",
+    "random/health-issues.md",
+    "random/installing-windows-11.md",
+    "random/body-mobility.md",
+    "app-dev/graal-vm.md",
     "cloud-platform/k3s/getting-started.md",
     "cloud-platform/k3s/k3s-on-hyper-v.md",
     "Untitled 3.base",
@@ -185,7 +196,6 @@
     "cloud-platform/redhat/open-shift/OpenShiftBuildingApplications.md",
     "cloud-platform/redhat/open-shift/OpenShiftLocal.md",
     "cloud-platform/redhat/open-shift/RedHat-Ubi-BaseImage.md",
-    "app-dev/graal-vm.md",
     "app-dev/java-crack.md",
     "dev-ops/intro-to-helm.md"
   ]
