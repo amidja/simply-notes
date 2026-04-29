@@ -1,24 +1,46 @@
 
 [Home Page](https://www.percona.com/mongodb/software/percona-server-for-mongodb)
 
+
 ## Installation 
 
 [Quick Start](https://docs.percona.com/percona-operator-for-mongodb/quickstart.html)
 
 
+## Delete
+
+https://docs.percona.com/percona-operator-for-mongodb/delete.html
+
+```bash 
+#delete the Cluster deployment
+kubectl get deploy -n psmdb
+kubectl delete deploy percona-server-mongodb-operator -n psmdb
+
+#delete the Operator CRDs
+kubectl get crd | grep percona
+kubectl delete crd perconaservermongodbbackups.psmdb.percona.com perconaservermongodbrestores.psmdb.percona.com perconaservermongodbs.psmdb.percona.com
+
+#delete the namespace
+kubectl create namespace psmdb
 ```
+
+
+Ignore all this stuff just follow the quick start 
+Installing using helm
+
+```bas
 $ helm repo add percona https://percona.github.io/percona-helm-charts/
 $ helm repo update
 ```
 ```
- kubectl create namespace psmb
+ kubectl create namespace psmdb
 ```
 
 ```bash
-helm install my-mongo-db-op percona/psmdb-operator --namespace psmb
+helm install my-mongo-db-op percona/psmdb-operator --namespace psmdb
 
 #  See if the operator Pod is running:
-kubectl get pods -l app.kubernetes.io/name=psmdb-operator --namespace psmb
+kubectl get pods -l app.kubernetes.io/name=psmdb-operator --namespace psmdb
 
 #  Check the operator logs if the Pod is not starting:
 export OP_POD=$(kubectl get pods -l app.kubernetes.io/name=psmdb-operator --namespace psmb-op --output name)

@@ -54,12 +54,38 @@ mkdir -p ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 # config your k3s cluster auth
 whoami
-sudo chown amidja:amidja ~/.kube/config  
+sudo chown amidja:amidja ~/.kube/config
 kubectl get no
 ```
 
 [K3S Server Config](https://docs.k3s.io/cli/server)
- 
-kubectl get secret  bootstrap-secret -oyaml -n  cattle-system  
-rancher-85cff9bffc-ks5sq
-kubectl port-forward rrancher-85cff9bffc-ks5sq 80:80 443:443 -n  cattle-system
+
+### Adding a Node to a Cluster
+
+https://docs.k3s.io/quick-start
+
+```bash
+#to find the value of the K3S_TOKEN
+sudo cat /var/lib/rancher/k3s/server/token
+#[sudo] password for amidja: 
+#K10b9cce408fd6d6f060d3140f8dbe1f93b3a176d2843806e8d19b03c6febd072cf::server:saad946@
+
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.0.77:6443 K3S_TOKEN=K10b9cce408fd6d6f060d3140f8dbe1f93b3a176d2843806e8d19b03c6febd072cf::server:saad946@ sh -
+
+```
+
+```bash
+#or this way with some env variable
+k3s_url="https://192.168.0.77:6443"
+k3s_token="K10b9cce408fd6d6f060d3140f8dbe1f93b3a176d2843806e8d19b03c6febd072cf::server:saad946@"
+curl -sfL https://get.k3s.io | K3S_URL=${k3s_url} K3S_TOKEN=${k3s_token} sh -
+```
+
+## Product References
+
+- [Installation Doc](https://docs.k3s.io/installation)
+- [Ref. Instructions](https://www.digitalocean.com/community/tutorials/how-to-setup-k3s-kubernetes-cluster-on-ubuntu)
+### Learning
+
+[Baeldung - K3 Getting Started](https://www.baeldung.com/ops/k3s-getting-started)
+

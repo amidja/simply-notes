@@ -1,10 +1,6 @@
 # K3S
 
-## Installation
-
-- [Installation Doc](https://docs.k3s.io/installation)
-- [Ref. Instructions](https://www.digitalocean.com/community/tutorials/how-to-setup-k3s-kubernetes-cluster-on-ubuntu)
-
+## 
 #### Install K3s
 
 ```bash
@@ -33,7 +29,8 @@ sudo /usr/local/bin/k3s-uninstall.sh
 
 The `kubeconfig` file stored at `/etc/rancher/k3s/k3s.yaml` is used to configure access to the Kubernetes cluster. 
 
-If you have installed upstream Kubernetes command line tools such as kubectl or helm you will need to configure them with the correct kubeconfig path. This can be done by either exporting the `KUBECONFIG` environment variable or by invoking the `--kubeconfig` command line flag. Refer to the examples below for details.
+If you have installed upstream Kubernetes command line tools such as kubectl or helm you will need to configure them with the correct kube config path.
+This can be done by either exporting the `KUBECONFIG` environment variable or by invoking the `--kubeconfig` command line flag. Refer to the examples below for details.
 
 
  ```bash
@@ -64,3 +61,12 @@ sudo chown ssm-user:ssm-user ~/.kube/config
 kubectl get no
 
 ```
+
+### Restarting K3S
+
+`sudo systemctl restart k3s`
+`sudo systemctl restart k3s-agent`
+
+`kubectl -n kube-system rollout restart daemonsets,deployments`
+
+
