@@ -59,7 +59,6 @@ chmod 600 "$KUBECONFIG"
 whoami
 sudo chown ssm-user:ssm-user ~/.kube/config  
 kubectl get no
-
 ```
 
 ### Restarting K3S

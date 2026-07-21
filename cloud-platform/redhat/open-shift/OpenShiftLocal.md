@@ -5,14 +5,16 @@
  https://console.redhat.com/openshift/create/local
  https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.20
 
- crc config set consent-telemetry no
+```
+crc config set consent-telemetry no
  crc config set memory 16384
  crc setup
  
  crc config set preset openshift
  crc start 
  crc console 
-
+```
+ 
 ## Starting the Cluster
 
 The server is accessible via web console at: 
