@@ -49,8 +49,8 @@ $ kubectl create secret tls my-tls-secret --cert=certs/myCA.pem --key=certs/myCA
 $ kubectl create secret tls my-tls-secret --cert=certs/myCA.pem --key=certs/myCA.key -n east
 ```
 
-
 ```bash
+#
 # Deploy application in two namespaces
 $ kubectl create namespace west
 $ kubectl create deployment frontend --image quay.io/skupper/hello-world-frontend -n west
@@ -85,16 +85,14 @@ accesstoken.skupper.io/my-skupper-grant created
 $ kubectl get accesstoken.skupper.io/my-skupper-grant -n east
 ```
 
-
 The controller can also be installed using a skupper chart that can be found at this [URL](https://github.com/skupperproject/skupper/tree/main/charts)
 This chart installs the [Skupper](https://skupper.io) version 2 controller for [Kubernetes](https://kubernetes.io) using the [Helm](https://helm.sh) package manager.
 
 For more information on the chart please see these notes: [[skupper-v2-chart]]
-
 ## Creating a Skupper Site
+
 https://docs.redhat.com/en/documentation/red_hat_service_interconnect/2.0/html/using_service_interconnect/kube-yaml
 ## Linking Skupper Sites
-
 
 ###  Hello World Example
 
@@ -102,9 +100,7 @@ Based from :
 - https://github.com/skupperproject/skupper/blob/main/cmd/controller/example/README.md
 - https://github.com/skupperproject/skupper-example-hello-world/tree/main
 
-
 Create test namespaces 'east' and 'west'
-
 
 #### Test connectivity
 
@@ -114,12 +110,7 @@ kubectl -n west port-forward deployment/frontend 8080:8080
 
 Visit http://localhost:8080
 
-
 ## References
 
 [Skupper RefDog](https://skupperproject.github.io/refdog/index.html)
-
-
-
-
 

@@ -1,10 +1,10 @@
 
-### RedHat Registry 
+## RedHat Registry 
 
 [RedHat Registry Authentication](https://access.redhat.com/articles/RegistryAuthentication)
 [RedHat Documentation](https://docs.redhat.com/en)
 
-### Red Hat Enterprise Linux
+## Red Hat Enterprise Linux
 
 [Using-shared-system-certificates](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/securing_networks/using-shared-system-certificates)
 
@@ -26,7 +26,7 @@ update-ca-trust extract
 keytool -list -v -keystore /etc/pki/java/cacerts -storepass changeit
 ```
 
-### RH UBI Base Image
+## RH UBI Base Image
 
 [Introduction](https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image)
 [Universal Base Images (UBI): Images, repositories, and packages](https://access.redhat.com/articles/4238681)
@@ -101,7 +101,6 @@ docker run -u root -it registry.access.redhat.com/ubi9/openjdk-17:1.24 /bin/bash
 	
 https://catalog.redhat.com/en/software/containers/ubi9/openjdk-17-runtime/
 https://developers.redhat.com/blog/2018/12/10/install-java-rhel8
-
 ##### JVM Diagnostic 
 
 [How to use jcmd](https://www.baeldung.com/running-jvm-diagnose)

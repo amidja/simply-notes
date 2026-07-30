@@ -1,6 +1,6 @@
 # Rancher Cluster with k3s, Helm and Hyper-V Manage
 
-[Title: Setting Up an On-Premises Rancher Clust er with k3s, Helm and Hyper-V Manager | by Saad Ullah Khan Warsi | Medium](https://medium.com/@saadullahkhanwarsi/title-setting-up-an-on-premise-k3s-cluster-with-rancher-helm-and-hyper-v-manager-cc888edb178c)
+[Title: Setting Up an On-Premises Rancher Cluster with k3s, Helm and Hyper-V Manager | by Saad Ullah Khan Warsi | Medium](https://medium.com/@saadullahkhanwarsi/title-setting-up-an-on-premise-k3s-cluster-with-rancher-helm-and-hyper-v-manager-cc888edb178c)
 
 ## ### Install Docker/Kubectl/Helm
  
@@ -71,7 +71,6 @@ sudo cat /var/lib/rancher/k3s/server/token
 #K10b9cce408fd6d6f060d3140f8dbe1f93b3a176d2843806e8d19b03c6febd072cf::server:saad946@
 
 curl -sfL https://get.k3s.io | K3S_URL=https://192.168.0.77:6443 K3S_TOKEN=K10b9cce408fd6d6f060d3140f8dbe1f93b3a176d2843806e8d19b03c6febd072cf::server:saad946@ sh -
-
 ```
 
 ```bash
@@ -80,7 +79,6 @@ k3s_url="https://192.168.0.77:6443"
 k3s_token="K10b9cce408fd6d6f060d3140f8dbe1f93b3a176d2843806e8d19b03c6febd072cf::server:saad946@"
 curl -sfL https://get.k3s.io | K3S_URL=${k3s_url} K3S_TOKEN=${k3s_token} sh -
 ```
-
 ## Product References
 
 - [Installation Doc](https://docs.k3s.io/installation)
@@ -88,4 +86,3 @@ curl -sfL https://get.k3s.io | K3S_URL=${k3s_url} K3S_TOKEN=${k3s_token} sh -
 ### Learning
 
 [Baeldung - K3 Getting Started](https://www.baeldung.com/ops/k3s-getting-started)
-
